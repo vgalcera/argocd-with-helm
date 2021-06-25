@@ -1,0 +1,17 @@
+namespace:
+  name: prod
+spec:
+  replicas: 2
+image:
+  repository: nginx
+image:
+  tag: 1.17.0
+resources:
+  requests:
+    cpu: 70m
+    memory: 256Mi
+service:
+  port: 80
+config:
+  key: "version"
+  value: "alpine"
