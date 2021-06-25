@@ -4,7 +4,6 @@ spec:
   replicas: 2
 image:
   repository: nginx
-image:
   tag: 1.17.0
 resources:
   requests:
@@ -12,6 +11,5 @@ resources:
     memory: 256Mi
 service:
   port: 80
-config:
-  key: "version"
-  value: "alpine"
+configmap:
+  data: "version: 1.17.0"

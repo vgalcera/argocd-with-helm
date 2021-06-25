@@ -4,12 +4,10 @@ spec:
   replicas: 1
 image:
   repository: nginx
-image:
   tag: 1.18.0
 resources:
   requests:
     cpu: 50m
     memory: 128Mi
-config:
-  key: "version"
-  value: "alpine"
+configmap:
+  data: "version: 1.18.0"
